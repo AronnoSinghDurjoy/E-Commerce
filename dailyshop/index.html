@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  
+    <div class="login-container" id="container">
+        <!-- User Login Form -->
+        <section class="form-container user-login" id="userLogin">
+            <form id="userForm" role="form" aria-labelledby="userLoginFormTitle">
+                <h1 id="userLoginFormTitle">User Login</h1>
+                <label for="userEmail">Email</label>
+                <input type="email" id="userEmail" placeholder="Enter your email" required>
+                
+                <label for="userPassword">Password</label>
+                <input type="password" id="userPassword" placeholder="Enter your password" required>
+                
+                <button type="submit" aria-label="Sign In as User">Sign In</button>
+                <div class="links">
+                    <a href="#" aria-label="Forgot Password">Forgot Password?</a>
+                    <a href="#" aria-label="Create Account">Create Account</a>
+                </div>
+            </form>
+        </section>
+
+        <!-- Admin Login Form -->
+        <section class="form-container admin-login" id="adminLogin">
+            <form id="adminForm" role="form" aria-labelledby="adminLoginFormTitle">
+                <h1 id="adminLoginFormTitle">Admin Login</h1>
+                <label for="adminEmail">Admin Email</label>
+                <input type="email" id="adminEmail" placeholder="Enter admin email" required>
+                
+                <label for="adminPassword">Password</label>
+                <input type="password" id="adminPassword" placeholder="Enter admin password" required>
+                
+                <label for="admin2FA">2FA Code</label>
+                <input type="text" id="admin2FA" placeholder="Enter 2FA code" required>
+                
+                <button type="submit" aria-label="Sign In as Admin">Sign In</button>
+            </form>
+        </section>
+
+        <!-- Overlay Container -->
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <h1>Admin Access</h1>
+                    <p>Secure admin panel with enhanced security features.</p>
+                    <button class="toggle-btn" onclick="switchPanel('admin')" aria-label="Switch to Admin Login">Admin Login</button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <h1>Welcome Back!</h1>
+                    <p>Enter your personal details to start shopping.</p>
+                    <button class="toggle-btn" onclick="switchPanel('user')" aria-label="Switch to User Login">User Login</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
